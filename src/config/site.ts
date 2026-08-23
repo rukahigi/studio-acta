@@ -33,12 +33,12 @@ export interface SiteConfig {
 }
 
 export const siteConfig: SiteConfig = {
-  siteUrl: 'https://template.ulna520.top',
-  siteTitle: 'ulBo Astro Theme',
-  siteTitleSuffix: '个人博客',
-  siteDescription: 'A configurable Astro blog theme with centralized config and zero-content defaults.',
-  locale: 'zh-CN',
-  headerGithubRepoUrl: 'https://github.com/xxy1103/ulbo-astro-theme-template',
+  siteUrl: 'https://studio-acta.collector-site.workers.dev/',
+  siteTitle: 'Studio ACTA',
+  siteTitleSuffix: '芥拾いの記録',
+  siteDescription: '2042年、あるいはもっと先に発掘されるための、2020年代からの記録と収集',
+  locale: 'ja-JP',
+  headerGithubRepoUrl: 'https://github.com/rukahigi/studio-acta',
   faviconIco: '/favicon.ico',
 };
 
