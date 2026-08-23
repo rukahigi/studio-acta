@@ -34,8 +34,8 @@ export interface HeroConfig {
 
 export const heroConfig: HeroConfig = {
   home: {
-    text: 'Build your ideas, one post at a time.',
-    subtitle: 'A clean Astro theme with centralized configuration.',
+    text: 'Studio ACTA',
+subtitle: '拾い、集め、未来へ残す。',
     backgroundImage: defaultBackground.src,
   },
   blog: {
