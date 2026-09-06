@@ -5,27 +5,27 @@ export interface SiteConfig {
   /**
    * Canonical production URL of this site.
    */
-  siteUrl: 'https://studio-acta.collector-site.workers.dev/',
+  siteUrl: string;
   /**
    * Global site title used in header and metadata.
    */
-  siteTitle: 'Studio ACTA',
+  siteTitle: string;
   /**
    * Optional suffix appended to browser/SEO page titles.
    */
-  siteTitleSuffix: '芥専門標本室',
+  siteTitleSuffix: string;
   /**
    * Default site description used by index and RSS metadata.
    */
-  siteDescription: '拾い、集め、残しておく。Studio ACTAの記録。',
+  siteDescription: string;
   /**
    * BCP-47 locale tag (for example: zh-CN, en-US).
    */
-  locale: 'ja-JP',
+  locale: string;
   /**
    * Repository URL shown in the header action area.
    */
-  headerGithubRepoUrl: 'https://github.com/rukahigi/studio-acta',
+  headerGithubRepoUrl: string;
   /**
    * Global favicon ico path served from the public directory.
    */
@@ -34,11 +34,11 @@ export interface SiteConfig {
 
 export const siteConfig: SiteConfig = {
   siteUrl: 'https://studio-acta.collector-site.workers.dev/',
-  siteTitle: 'ulBo Astro Theme',
-  siteTitleSuffix: '个人博客',
-  siteDescription: 'A configurable Astro blog theme with centralized config and zero-content defaults.',
-  locale: 'zh-CN',
-  headerGithubRepoUrl: 'https://github.com/xxy1103/ulbo-astro-theme-template',
+  siteTitle: 'Studio ACTA',
+  siteTitleSuffix: '芥専門標本室',
+  siteDescription: '拾い、集め、残しておく。Studio ACTAの記録。',
+  locale: 'ja-JP',
+  headerGithubRepoUrl: 'https://github.com/rukahigi/studio-acta',
   faviconIco: '/favicon.ico',
 };
 
