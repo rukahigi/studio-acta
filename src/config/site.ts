@@ -5,27 +5,27 @@ export interface SiteConfig {
   /**
    * Canonical production URL of this site.
    */
-  siteUrl: string;
+  siteUrl: 'https://studio-acta.collector-site.workers.dev/',
   /**
    * Global site title used in header and metadata.
    */
-  siteTitle: string;
+  siteTitle: 'Studio ACTA',
   /**
    * Optional suffix appended to browser/SEO page titles.
    */
-  siteTitleSuffix: string;
+  siteTitleSuffix: '芥専門標本室',
   /**
    * Default site description used by index and RSS metadata.
    */
-  siteDescription: string;
+  siteDescription: '拾い、集め、残しておく。Studio ACTAの記録。',
   /**
    * BCP-47 locale tag (for example: zh-CN, en-US).
    */
-  locale: string;
+  locale: 'ja-JP',
   /**
    * Repository URL shown in the header action area.
    */
-  headerGithubRepoUrl: string;
+  headerGithubRepoUrl: 'https://github.com/rukahigi/studio-acta',
   /**
    * Global favicon ico path served from the public directory.
    */
@@ -33,7 +33,7 @@ export interface SiteConfig {
 }
 
 export const siteConfig: SiteConfig = {
-  siteUrl: 'https://template.ulna520.top',
+  siteUrl: 'https://studio-acta.collector-site.workers.dev/',
   siteTitle: 'ulBo Astro Theme',
   siteTitleSuffix: '个人博客',
   siteDescription: 'A configurable Astro blog theme with centralized config and zero-content defaults.',
