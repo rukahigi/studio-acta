@@ -35,7 +35,7 @@ function formatWordCount(count: number) {
 }
 
 function formatDate(date: Date) {
-  return date.toLocaleDateString('zh-CN', {
+  return date.toLocaleDateString('ja-JP', {
     year: 'numeric',
     month: 'long',
     day: 'numeric',
@@ -333,29 +333,29 @@ function formatDate(date: Date) {
       <div class="stats-container">
         <SectionHeader
           number="01"
-          title="文章"
+          title="収集記録"
           intro={hasPosts
-            ? `从 ${formatDate(startDate!)} 的第一篇文章开始，本站已经更新了......`
-            : '当前模板未附带文章内容，你可以在 src/content/blog/ 中添加 Markdown 文章后自动显示统计与列表。'}
+            ? `从 ${formatDate(startDate!)} 的の最初の記録から、これまでの収集。`
+            : 'まだ収集記録はありません。'}
         />
 
         <div class="stats-grid">
           <div class="stat-item">
-            <span class="stat-value">{postCount} 篇</span>
-            <span class="stat-label">文章</span>
+            <span class="stat-value">{postCount} 件</span>
+            <span class="stat-label">記録</span>
           </div>
           <div class="stat-item">
             <span class="stat-value">{formatWordCount(wordCount)}</span>
-            <span class="stat-label">字数</span>
+            <span class="stat-label">文字数</span>
           </div>
           <div class="stat-item">
-            <span class="stat-value">{tagCount} 个</span>
-            <span class="stat-label">标签</span>
+            <span class="stat-value">{tagCount} 個</span>
+            <span class="stat-label">分類</span>
           </div>
         </div>
 
         <div class="recent-posts-section">
-          <SectionHeader number="02" title="最近更新" intro={hasPosts ? '最新发布的 10 篇文章' : '暂无文章可展示'} />
+          <SectionHeader number="02" title="最近の収集" intro={hasPosts ? '最近追加された 10 件の記録' : 'まだ記録はありません'} />
 
           {recentPosts.length > 0 ? (
             <>
@@ -375,11 +375,11 @@ function formatDate(date: Date) {
                   />
                 ))}
               </div>
-              <a href="/blog" class="blog-link" style="margin-top: 1em;">查看全部文章 ⇗</a>
+              <a href="/blog" class="blog-link" style="margin-top: 1em;">全ての収集記録を見る ⇗</a>
             </>
           ) : (
             <p class="empty-state">
-              这里还没有文章。请在 <code>src/content/blog/</code> 新建 <code>.md</code> 或 <code>.mdx</code> 文件。
+              まだ収集記録はありません。
             </p>
           )}
         </div>
