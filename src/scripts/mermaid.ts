@@ -27,7 +27,7 @@ function getConfig(forceLight = false): MermaidConfig {
 		startOnLoad: false,
 		securityLevel: 'strict',
 		theme: 'base',
-		fontFamily: '"Inter", "Noto Sans SC", system-ui, sans-serif',
+		fontFamily: '"Inter", "Noto Sans JP", system-ui, sans-serif',
 		themeVariables: dark
 			? {
 					background: '#161b22',
