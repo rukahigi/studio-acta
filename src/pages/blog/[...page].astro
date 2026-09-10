@@ -62,14 +62,14 @@ const hasPosts = page.total > 0;
 const blogHero = heroConfig.blog;
 const pageTitle =
   !hasPosts || page.currentPage === 1
-    ? `博客 | ${siteTitle}`
-    : `博客 - 第 ${page.currentPage} 页 | ${siteTitle}`;
+    ? `収集記録 | ${siteTitle}`
+    : `収集記録 - ${page.currentPage}ページ | ${siteTitle}`;
 const pageDescription =
   !hasPosts
-    ? '当前模板未附带文章内容，你可以在 src/content/blog/ 中添加 Markdown 后自动生成列表。'
+    ? 'まだ収集記録はありません。'
     : page.currentPage === 1
-    ? `按发布时间倒序浏览全部 ${page.total} 篇文章。`
-    : `博客归档第 ${page.currentPage} 页（共 ${page.lastPage} 页），收录 ${page.total} 篇文章。`;
+    ? `全 ${page.total} 件の収集記録を新しい順に表示しています。`
+    : `収集記録 ${page.currentPage} / ${page.lastPage} ページ。全 ${page.total} 件。`;
 const shouldNoindex = page.currentPage > 1;
 const canonicalPath = getBlogPagePath(page.currentPage);
 const canonicalURL = new URL(canonicalPath, siteURL);
