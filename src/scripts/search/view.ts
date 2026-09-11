@@ -25,7 +25,7 @@ export class SearchView {
 		const input = root.querySelector<HTMLInputElement>('#search-input');
 		const results = root.querySelector<HTMLElement>('#search-results');
 		const liveRegion = root.querySelector<HTMLElement>('#search-status');
-		if (!input || !results || !liveRegion) throw new Error('搜索界面结构不完整');
+		if (!input || !results || !liveRegion) throw new Error('検索画面の構造が不完全です');
 		this.input = input;
 		this.results = results;
 		this.liveRegion = liveRegion;
@@ -39,12 +39,12 @@ export class SearchView {
 	render(state: SearchState, documentCount: number, onRetry: RetryHandler) {
 		if (state.status === 'idle' || (state.status === 'ready' && !state.query)) {
 			this.renderTemplate('idle');
-			this.announce('输入关键词开始搜索');
+			this.announce('キーワードを入力して検索');
 			return;
 		}
 		if (state.status === 'loading') {
 			this.renderTemplate('loading');
-			this.announce('正在加载搜索索引');
+			this.announce('検索データを読み込んでいます');
 			return;
 		}
 		if (state.status === 'error') {
@@ -52,22 +52,22 @@ export class SearchView {
 			const message = this.results.querySelector<HTMLElement>('[data-search-error-message]');
 			if (message) message.textContent = state.message;
 			this.results.querySelector<HTMLButtonElement>('[data-search-retry]')?.addEventListener('click', onRetry, { once: true });
-			this.announce(`${state.message}，可以重试`);
+			this.announce(`${state.message}。再試行できます`);
 			return;
 		}
 		if (documentCount === 0) {
 			this.renderTemplate('empty-index');
-			this.announce('暂无可搜索文章');
+			this.announce('検索できる記事がありません');
 			return;
 		}
 		if (state.hits.length === 0) {
 			this.renderTemplate('no-results');
-			this.announce('未找到相关文章');
+			this.announce('該当する記事が見つかりません');
 			return;
 		}
 
 		this.results.replaceChildren(...state.hits.map((hit, index) => this.createResult(hit, index)));
-		this.announce(`找到 ${state.hits.length} 篇相关文章`);
+		this.announce(`該当する記事が ${state.hits.length} 件見つかりました`);
 	}
 
 	getResultLinks(): HTMLAnchorElement[] {
@@ -95,7 +95,7 @@ export class SearchView {
 
 	private renderTemplate(name: string) {
 		const template = this.templates.get(name);
-		if (!template) throw new Error(`缺少搜索状态模板：${name}`);
+		if (!template) throw new Error(`検索状態テンプレートがありません：${name}`);
 		this.results.replaceChildren(template.content.cloneNode(true));
 	}
 

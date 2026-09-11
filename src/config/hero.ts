@@ -34,23 +34,23 @@ export interface HeroConfig {
 
 export const heroConfig: HeroConfig = {
   home: {
-    text: 'Build your ideas, one post at a time.',
-    subtitle: 'A clean Astro theme with centralized configuration.',
+    text: 'Studio ACTA',
+    subtitle: '拾い、集め、残しておく。',
     backgroundImage: defaultBackground.src,
   },
   blog: {
-    text: 'All Posts',
-    subtitle: 'Browse your writing archive.',
+    text: '収集記録',
+    subtitle: '拾い集めたものの記録。',
     backgroundImage: defaultBackground.src,
   },
   tags: {
-    text: 'Tags',
-    subtitle: 'Explore topics by category and tag.',
+    text: '分類',
+    subtitle: '分類から記録を探す。',
     backgroundImage: defaultBackground.src,
   },
   about: {
-    text: 'About',
-    subtitle: 'Introduce yourself and your work.',
+    text: 'Studio ACTAについて',
+    subtitle: '収集家（芥専門）と、この場所について。',
     backgroundImage: defaultBackground.src,
   },
   postDefaultBackground: defaultBackground.src,
