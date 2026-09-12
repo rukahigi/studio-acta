@@ -3,7 +3,7 @@ title: "ここに記事タイトル"
 date: "2026-09-12T22:00:00+09:00"
 updated: "2026-09-12T22:00:00+09:00"
 description: "この記事の内容を1〜2文で簡潔に説明する。"
-draft: false
+draft: true
 categories:
   - "記録"
 tags:
