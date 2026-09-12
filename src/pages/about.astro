@@ -1,5 +1,6 @@
 ---
 import { Image } from 'astro:assets';
+import AboutContent from '../content/about.md';
 import ContentCard from '../components/ContentCard.astro';
 import HeroHeader from '../components/HeroHeader.astro';
 import PageShell from '../layouts/PageShell.astro';
@@ -245,7 +246,32 @@ const personSchema = {
           text-align: center;
         }
       }
-    </style>
+      .about-text-header {
+        margin-top: 3em;
+      }
+
+      .about-text {
+        padding: 2.2em;
+        background: var(--color-surface);
+        border: 1px solid color-mix(in srgb, var(--color-border) 78%, transparent);
+        border-radius: 18px;
+        box-shadow: var(--shadow-card);
+        color: var(--color-text-secondary);
+        line-height: 1.9;
+      }
+
+      .about-text :global(h2) {
+        margin-top: 0;
+        color: var(--color-text-strong);
+      }
+
+      @media (max-width: 720px) {
+        .about-text {
+          padding: 1.6em;
+          border-radius: 0;
+        }
+      }    
+</style>
 
   <HeroHeader
     text={aboutHero.text}
@@ -357,7 +383,15 @@ const personSchema = {
               </div>
             )}
           </div>
-        </article>
+                </article>
+
+        <div class="section-header about-text-header">
+          <span class="section-number">02</span>
+        </div>
+
+        <section class="about-text prose">
+          <AboutContent />
+        </section>
       </div>
     </ContentCard>
   </div>
